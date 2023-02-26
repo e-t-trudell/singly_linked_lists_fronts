@@ -43,10 +43,29 @@ class SLL {
         }
         console.log(curNode.data);
     }
+    display() {
+        let runner=this.head;
+        let arr = [];
+        // let string = "";
+        // let sum=0
+        if(!this.head) {return null;}
+        while(runner !== null){
+            // console.log(runner.data);
+            arr.push(runner.data);
+            console.log(arr);
+            runner=runner.next
+        }
+        
+        console.log(arr.join(", "));
+        // console.log(string);
+        return null;
+    }
 }
 let first = new SLL(5);
 first.addFront(5).addFront(10);
+// console.log("first",first);
+// first.removeFront();
 console.log("first",first);
-first.removeFront();
-console.log("first",first);
-first.front();
+// first.front();
+first.addFront(8).addFront(10);
+first.display();
